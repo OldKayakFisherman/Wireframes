@@ -5,6 +5,7 @@
     <title>Title</title>
 
     <link rel="stylesheet" href="https://cdn.usebootstrap.com/bootstrap/5.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/kanban.css">
 
     <script src="https://cdn.usebootstrap.com/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
 
@@ -21,16 +22,21 @@
             <div data-column class="col-2">Complete</div>
         </div>
 
+
         <div class="row">
 
-            <div data-swimlane class="col-2">
-
-
-
+            <div data-swimlane="0" class="col-2">
+                <div draggable="true" data-swimlane-item>Task 1</div>
             </div>
-            <div data-swimlane class="col-2"></div>
-            <div data-swimlane class="col-2"></div>
-            <div data-swimlane class="col-2"></div>
+            <div data-swimlane="1" draggable="true" class="col-2">
+                <div draggable="true" data-swimlane-item>Task 2</div>
+            </div>
+            <div data-swimlane="2" draggable="true" class="col-2">
+                <div draggable="true" data-swimlane-item>Task 3</div>
+            </div>
+            <div data-swimlane="2" class="col-2">
+                <div draggable="true" data-swimlane-item>Task 4</div>
+            </div>
         </div>
     </div>
 
