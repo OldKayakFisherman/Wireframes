@@ -13,16 +13,18 @@
 </head>
 <body>
 
-    <main>
+    <header class="py-3 mb-3 border-bottom">
+    <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
+        <h1>FAC Monitoring</h1>
+    </div>
+</header>
 
-     <header class="py-3 mb-3 border-bottom">
-            <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
-                <h1>FAC Monitoring</h1>
-            </div>
-        </header>
+    <div class="container">
 
-      <div id="sideMenu">
-          <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
+      <div class="row">
+
+          <div class="col-md-4" id="sideMenu">
+            <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
               <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                   <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
                   <span class="fs-4">Checks</span>
@@ -39,9 +41,179 @@
               <hr>
 
           </div>
-      </div>
+          </div>
 
-    </main>
+          <div class="col-md-8">
+
+              <!-- Applications Status  -->
+              <div class="row">
+                  <div class="col-md-6">
+
+                      <h3>Application Status</h3>
+
+                      <table class="table table-striped">
+                          <thead>
+                          <tr>
+                              <th>Application</th>
+                              <th>Status</th>
+                              <th></th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Collections</td>
+                              <td><span class="badge bg-success">Up (Pinged 4 Minutes Ago)</span></td>
+                              <td><a href="#">Ping</a></td>
+                            </tr>
+                            <tr>
+                                <td>Dissemination</td>
+                                <td><span class="badge bg-success">Up (Pinged 3 Minutes Ago)</span></td>
+                                <td><a href="#">Ping</a></td>
+                            </tr>
+                            <tr>
+                                <td>ATAS</td>
+                                <td><span class="badge bg-success">Up (Pinged 2 Minutes Ago)</span></td>
+                                <td><a href="#">Ping</a></td>
+                            </tr>
+                            <tr>
+                                <td>Manager</td>
+                                <td><span class="badge bg-success">Up (Pinged 8 Minutes Ago)</span></td>
+                                <td><a href="#">Ping</a></td>
+                            </tr>
+                            <tr>
+                                <td>Web</td>
+                                <td><span class="badge bg-danger">Down (Pinged 2 Minutes Ago)</span></td>
+                                <td><a href="#">Ping</a></td>
+                            </tr>
+
+
+
+                          </tbody>
+                      </table>
+
+                  </div>
+              </div>
+
+              <!-- Database Status  -->
+              <div class="row">
+                  <div class="col-md-6">
+
+                      <h3>Database Status</h3>
+
+                      <ul class="nav nav-pills nav-fill mb-3 mt-3">
+                          <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="#">PROD</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" aria-current="page" href="#">STAGE</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" aria-current="page" href="#">TEST</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" aria-current="page" href="#">DEV</a>
+                          </li>
+
+                      </ul>
+
+                      <table class="table table-striped">
+                          <thead>
+                          <tr>
+                              <th>Application</th>
+                              <th>Status</th>
+                              <th></th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                              <td>Collections</td>
+                              <td><span class="badge bg-success">Up (Pinged 4 Minutes Ago)</span></td>
+                              <td><a href="#">Ping</a></td>
+                          </tr>
+                          <tr>
+                              <td>Dissemination</td>
+                              <td><span class="badge bg-success">Up (Pinged 3 Minutes Ago)</span></td>
+                              <td><a href="#">Ping</a></td>
+                          </tr>
+                          <tr>
+                              <td>ATAS</td>
+                              <td><span class="badge bg-success">Up (Pinged 2 Minutes Ago)</span></td>
+                              <td><a href="#">Ping</a></td>
+                          </tr>
+                          <tr>
+                              <td>Manager</td>
+                              <td><span class="badge bg-success">Up (Pinged 8 Minutes Ago)</span></td>
+                              <td><a href="#">Ping</a></td>
+                          </tr>
+                          <tr>
+                              <td>Web</td>
+                              <td><span class="badge bg-danger">Down (Pinged 2 Minutes Ago)</span></td>
+                              <td><a href="#">Ping</a></td>
+                          </tr>
+
+
+
+                          </tbody>
+                      </table>
+
+                  </div>
+              </div>
+
+              <!-- Drive space -->
+              <div class="row">
+
+                 <div class="col-md-6">
+
+                     <h3>File Storage Status</h3>
+
+                     <p>FS11 disk's storage capacity is at:
+                         <meter min="0" max="250" value="175">175 out of 250 GB</meter>
+                         (925GB Used of 1.5TB)
+                     </p>
+                 </div>
+             </div>
+
+              <!-- Nightly Process -->
+              <div class="row">
+                  <div class="col-md-6">
+
+                      <h3>Nightly Process Status</h3>
+
+                      <table class="table table-striped">
+                          <thead>
+                              <tr>
+                                  <th>Process</th>
+                                  <th>Status</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                                <tr>
+                                    <td>Processing ELEC Table Population</td>
+                                    <td><span class="badge bg-success">Successful</span></td>
+                                </tr>
+                                <tr>
+                                    <td>PDF Image Transfer</td>
+                                    <td><span class="badge bg-danger">Failed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Revision Process</td>
+                                    <td><span class="badge bg-success">Successful</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Processing To Dissemination</td>
+                                    <td><span class="badge bg-success">Last Firewall Date 1/1/2023</span></td>
+                                </tr>
+                          </tbody>
+                      </table>
+
+                  </div>
+              </div>
+
+
+
+          </div>
+      </div>
+    </div>
 
 </body>
 </html>
