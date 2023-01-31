@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>FAC Monitoring</title>
 
-     <link rel="stylesheet" href="https://cdn.usebootstrap.com/bootstrap/5.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.usebootstrap.com/bootstrap/5.0.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/site.css">
 
     <script src="https://cdn.usebootstrap.com/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://unpkg.com/petite-vue" defer init></script>
 
 </head>
 <body>
@@ -50,6 +50,22 @@
                   <div class="col-md-6">
 
                       <h3>Application Status</h3>
+
+                      <ul class="nav nav-pills nav-fill mb-3 mt-3">
+                          <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="#">PROD</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" aria-current="page" href="#">STAGE</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" aria-current="page" href="#">TEST</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" aria-current="page" href="#">DEV</a>
+                          </li>
+
+                      </ul>
 
                       <table class="table table-striped">
                           <thead>
@@ -100,54 +116,33 @@
 
                       <h3>Database Status</h3>
 
-                      <ul class="nav nav-pills nav-fill mb-3 mt-3">
-                          <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="#">PROD</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" aria-current="page" href="#">STAGE</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" aria-current="page" href="#">TEST</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" aria-current="page" href="#">DEV</a>
-                          </li>
-
-                      </ul>
-
                       <table class="table table-striped">
                           <thead>
                           <tr>
-                              <th>Application</th>
+                              <th>Database</th>
                               <th>Status</th>
                               <th></th>
                           </tr>
                           </thead>
                           <tbody>
                           <tr>
-                              <td>Collections</td>
+                              <td>DEV</td>
                               <td><span class="badge bg-success">Up (Pinged 4 Minutes Ago)</span></td>
                               <td><a href="#">Ping</a></td>
                           </tr>
                           <tr>
-                              <td>Dissemination</td>
+                              <td>TEST</td>
                               <td><span class="badge bg-success">Up (Pinged 3 Minutes Ago)</span></td>
                               <td><a href="#">Ping</a></td>
                           </tr>
                           <tr>
-                              <td>ATAS</td>
+                              <td>STAGE</td>
                               <td><span class="badge bg-success">Up (Pinged 2 Minutes Ago)</span></td>
                               <td><a href="#">Ping</a></td>
                           </tr>
                           <tr>
-                              <td>Manager</td>
+                              <td>PROD</td>
                               <td><span class="badge bg-success">Up (Pinged 8 Minutes Ago)</span></td>
-                              <td><a href="#">Ping</a></td>
-                          </tr>
-                          <tr>
-                              <td>Web</td>
-                              <td><span class="badge bg-danger">Down (Pinged 2 Minutes Ago)</span></td>
                               <td><a href="#">Ping</a></td>
                           </tr>
 
@@ -170,6 +165,18 @@
                          <meter min="0" max="250" value="175">175 out of 250 GB</meter>
                          (925GB Used of 1.5TB)
                      </p>
+
+                     <p>C:\ disk's storage capacity is at:
+                         <meter min="0" max="150" value="50">50 out of 150 GB</meter>
+                         (925GB Used of 1.5TB)
+                     </p>
+
+                     <p>H:\ disk's storage capacity is at:
+                         <meter min="0" max="50" value="49">49 out of 50 GB</meter>
+                         (925GB Used of 1.5TB)
+                     </p>
+
+
                  </div>
              </div>
 
@@ -203,12 +210,57 @@
                                     <td>Processing To Dissemination</td>
                                     <td><span class="badge bg-success">Last Firewall Date 1/1/2023</span></td>
                                 </tr>
+                                <tr>
+                                    <td>Public Data Downloads</td>
+                                    <td><span class="badge bg-success">In Place</span></td>
+                                </tr>
                           </tbody>
                       </table>
 
                   </div>
               </div>
 
+              <!-- Daily Errors -->
+              <div class="row">
+                  <div class="col-md-6">
+
+                      <h3>Daily Application Errors</h3>
+
+                      <table class="table table-striped">
+                          <thead>
+                          <tr>
+                              <th>Application</th>
+                              <th>Errors</th>
+                              <th>Unique IP's</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                              <td><a href="#">Collections</a></td>
+                              <td>45</td>
+                              <td>40</td>
+                          </tr>
+                          <tr>
+                              <td class="bg-danger"><a href="#">Dissemination</a></td>
+                              <td class="bg-danger">110</td>
+                              <td class="bg-danger">4</td>
+                          </tr>
+                          <tr>
+                              <td><a href="#">Manager</a></td>
+                              <td>2</td>
+                              <td>2</td>
+                          </tr>
+                          <tr>
+                              <td><a href="#">ATAS</a></td>
+                              <td>112</td>
+                              <td>90</td>
+                          </tr>
+
+                          </tbody>
+                      </table>
+
+                  </div>
+              </div>
 
 
           </div>
