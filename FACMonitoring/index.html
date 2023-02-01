@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/site.css">
 
     <script src="https://cdn.usebootstrap.com/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/petite-vue" defer init></script>
 
 </head>
 <body>
@@ -25,16 +24,40 @@
 
           <div class="col-md-4" id="sideMenu">
             <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
-              <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+              <span  class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                   <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
                   <span class="fs-4">Checks</span>
-              </a>
+              </span>
               <hr>
               <ul class="nav nav-pills flex-column mb-auto">
                   <li class="nav-item">
                       <a href="#" class="nav-link active" aria-current="page">
                           <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
-                          Home
+                          Application Errors
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="#" class="nav-link" aria-current="page">
+                          <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                          Nightly Process Status
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="#" class="nav-link" aria-current="page">
+                          <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                          Application Status
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="#" class="nav-link" aria-current="page">
+                          <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                          Database Status
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="#" class="nav-link" aria-current="page">
+                          <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                          File Storage Status
                       </a>
                   </li>
               </ul>
@@ -46,7 +69,7 @@
           <div class="col-md-8">
 
               <!-- Applications Status  -->
-              <div class="row">
+              <div id="dvApplicationStatus" class="row">
                   <div class="col-md-6">
 
                       <h3>Application Status</h3>
@@ -111,7 +134,7 @@
               </div>
 
               <!-- Database Status  -->
-              <div class="row">
+              <div id="dvDatabaseStatus" class="row">
                   <div class="col-md-6">
 
                       <h3>Database Status</h3>
@@ -155,7 +178,7 @@
               </div>
 
               <!-- Drive space -->
-              <div class="row">
+              <div id="dvDriveSpaceStatus" class="row">
 
                  <div class="col-md-6">
 
@@ -181,7 +204,7 @@
              </div>
 
               <!-- Nightly Process -->
-              <div class="row">
+              <div id="dvNightlyProcessStatus" class="row">
                   <div class="col-md-6">
 
                       <h3>Nightly Process Status</h3>
@@ -221,7 +244,7 @@
               </div>
 
               <!-- Daily Errors -->
-              <div class="row">
+              <div id="dvApplicationErrorStatus" class="row">
                   <div class="col-md-6">
 
                       <h3>Daily Application Errors</h3>
@@ -266,6 +289,8 @@
           </div>
       </div>
     </div>
+
+    <script async type="module"  src="js/IndexHelper.js"></script>
 
 </body>
 </html>
