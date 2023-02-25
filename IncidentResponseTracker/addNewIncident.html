@@ -14,9 +14,9 @@
 </head>
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <div class="row">
+    <div class="row">
         <header class="py-3 mb-3">
             <div class="align-items-center">
                 <div class="float-start">
@@ -27,11 +27,11 @@
                 </div>
             </div>
         </header>
-            <hr>
-        </div>
+        <hr>
+    </div>
 
-        <div class="row">
-            <div class="col-md-3" id="sideMenu">
+    <div class="row">
+        <div class="col-md-3" id="sideMenu">
             <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
               <span  class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                   <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
@@ -82,19 +82,59 @@
             </div>
         </div>
 
-            <div class="col-md-9">
-                <div class="row">
-                    <div class="col-md-6 card">
-                        <div class="card-body">
-                            233 existing incidents, <a href="addNewIncident.html">add new?</a>
+        <div class="col-md-9">
+
+            <div class="card">
+                <div class="card-header">
+                    Add new incident
+                </div>
+                <div class="card-body">
+                    <form target="_self">
+                        <div class="mb-3">
+                            <label for="txtExternalCaseNumber" class="form-label">External Case #:</label>
+                            <input type="text" class="form-control" id="txtExternalCaseNumber" placeholder="CIRT#">
                         </div>
-                    </div>
+                        <div class="mb-3">
+                            <label for="txtInternalCaseNumber" class="form-label">Internal Case #:</label>
+                            <input type="text" class="form-control" readonly id="txtInternalCaseNumber" value="123">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="txtIP" class="form-label">Suspect IP:</label>
+                            <input type="text" class="form-control" id="txtIP" placeholder="192.168.1.1">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="txtRegion" class="form-label">Region:</label>
+                            <input type="text" class="form-control" id="txtRegion" placeholder="Berlin">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="txtCountry" class="form-label">Region:</label>
+                            <input type="text" class="form-control" id="txtCountry" placeholder="Germany">
+                        </div>
+
+
+
+
+                        <div>
+                            <a href="index.html" class="btn btn-primary">Cancel</a>
+                            <a href="history.html" class="btn btn-success">Submit</a>
+                        </div>
+
+                    </form>
                 </div>
             </div>
+
         </div>
+
+
     </div>
 
-    <script async type="module" src="/js/indexHelper.js"></script>
+    </div>
+</div>
+
+<script async type="module" src="/js/indexHelper.js"></script>
 
 </body>
 </html>
