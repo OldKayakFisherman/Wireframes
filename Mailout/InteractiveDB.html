@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>DB Interactive</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width;initial-scale=1.0" />
+
+        <style>
+
+            .debug{
+                border: red 2px solid;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <main>
+
+                <div style="display: flex">
+                    <h2>Interactive Database (DB)</h2>
+                </div>
+                <div style="display: flex;  align-items: flex-start;">
+                    <span>Case Selection for Current Year:</span>
+                    <select style="margin-left: 2em">
+                        <option selected>2024</option>
+                    </select>
+                </div>
+
+                <div style="border: gray 1px solid;">
+                    <div style="display: flex">
+                        <div style="display: flex; flex-direction: column;">
+                            <label for="selTable">Select Table</label>
+                            <select id="selTable">
+                                <option>RHP_CTRL</option>
+                            </select>
+                        </div>
+                        <div style="display: flex; flex-direction:row; ">
+
+                            <span>Select Form flag(s)</span>
+
+                            <label for="chkAll"><input id="chkAll" type="checkbox" value="All">All</label>
+                            <label for="chk10"><input id="chk10" type="checkbox" value="10">10</label>
+                            <label for="chk10S"><input id="chk10S" type="checkbox" value="10S">10S</label>
+                            <label for="chk11"><input id="chk11" type="checkbox" value="11">11</label>
+                            <label for="chk11C"><input id="chk11C" type="checkbox" value="11C">11C</label>
+                            <label for="chk11S"><input id="chk11S" type="checkbox" value="11S">11S</label>
+                            <label for="chk11CS"><input id="chk11CS" type="checkbox" value="11CS">11CS</label>
+                            <label for="chk15"><input id="chk15" type="checkbox" value="15">15</label>
+                            <label for="chk15S"><input id="chk15S" type="checkbox" value="15S">15S</label>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: flex-start; column-gap: 5px;">
+                        <div class="debug" style="display: flex; flex-direction: column;">
+                            <label for="txtID">ID</label>
+                            <input id="txtID" type="text">
+                        </div>
+                        <div class="debug" style="display: flex; flex-direction: column;">
+                            <label for="selIDCD">ID CD</label>
+                            <select id="selIDCD">
+                                <option></option>
+                            </select>
+                        </div>
+                        <div class="debug" style="display: flex; flex-direction: column;">
+                            <label for="txtPART">PART</label>
+                            <input id="txtPART" type="text">
+                        </div>
+                        <div class="debug" style="display: flex; flex-direction: column;">
+                            <label for="selPartCD">PART CD</label>
+                            <select id="selPartCD">
+                                <option></option>
+                            </select>
+                        </div>
+                        <div class="debug" style="display: flex; flex-direction: column;">
+                            <label for="selMAILCYC">MAIL_CYC</label>
+                            <select id="selMAILCYC">
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: flex-start; column-gap: 5px;">
+                        <div class="debug" style="display: flex; flex-direction: column;">
+                            <label for="txtLSTMLDT">LST_MLDT</label>
+                            <input id="txtLSTMLDT" type="date">
+                        </div>
+                        <div class="debug" style="display: flex; flex-direction: column;">
+                            <label for="txtNXTMLDT">NXTMLDT</label>
+                            <input id="txtNXTMLDT" type="date">
+                        </div>
+                        <div class="debug" style="display: flex; flex-direction: column;">
+                            <label for="selNOTMAI">NOT MAI</label>
+                            <select id="selNOTMAI">
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+
+        </main>
+    </body>
+
+</html>
+
